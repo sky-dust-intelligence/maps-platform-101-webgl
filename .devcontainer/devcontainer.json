@@ -1,2 +1,15 @@
-// create a container.json file in the .devcontainer folder//
-
+{
+    "name": "Node.js 102 Geo Maps Project",
+    "dockerFile": "Dockerfile",
+    "appPort": 3000,
+    "extensions": [
+      "esbenp.prettier-vscode",
+      "dbaeumer.vscode-eslint",
+      "code.visualstudio.com",
+      "visualstudioexptteam.vscodeintellicode"
+    ],
+    "settings": {
+      "terminal.integrated.shell.linux": "/bin/bash"
+    },
+    "postCreateCommand": "echo 'Development container created!'"
+  }

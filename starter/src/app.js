@@ -14,9 +14,7 @@
 
 import { Loader } from '@googlemaps/js-api-loader';
 
-const apiOptions = {
-  "apiKey": "YOUR_API_KEY",
-  "version": "beta"
+const apiOptions,apiKey = { AIzaSyAwQr9LowpxIkb84QDZeAmwO30P0OJpLPs
 };
 
 const mapOptions = {
@@ -25,10 +23,10 @@ const mapOptions = {
   "mapId": "YOUR_MAP_ID"
 }
 
-async function initMap() {    
+async function initMap() {
   const mapDiv = document.getElementById("map");
   const apiLoader = new Loader(apiOptions);
-  await apiLoader.load()      
+  await apiLoader.load()
   return new google.maps.Map(mapDiv, mapOptions);
 }
 
@@ -37,6 +35,6 @@ function initWebGLOverlayView (map) {
   // WebGLOverlayView code goes here
 }
 
-(async () => {        
+(async () => {
   const map = await initMap();
 })();
